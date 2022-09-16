@@ -8,6 +8,10 @@
     box-sizing: border-box;
 }
 
+*:focus {
+    outline: none;
+}
+
 /*- - - - - - - - - - - - - - - - - - */
 body,
 html {
@@ -53,11 +57,14 @@ li {
     cursor: pointer;
 }
 
-.header__item:hover {
+.header__item:hover,
+.header__item:focus-within {
+
     text-decoration: underline;
 }
 
-.header__icon img.icon__img:hover {
+.header__icon img.icon__img:hover,
+.header__icon img.icon__img:focus-within {
     padding: 5px;
     background-color: #b0b0b0;
     border-radius: 50%;
@@ -100,7 +107,8 @@ li {
 }
 
 .popup__menu__wrapper {
-    border: 1px solid yellowgreen;
+    /*border: 1px solid #8a8989;*/
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
     position: absolute;
     width: 300px;
     right: 10px;
@@ -118,7 +126,7 @@ li.button {
 }
 .popup__menu, .popup__menu__more {
     padding: 15px;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 
     display: grid;
     grid-template: auto/ 1fr 1fr 1fr;
@@ -134,7 +142,8 @@ li.button {
     text-decoration: none;
     color: #445162;
 }
-.popup__menu__item a:hover {
+.popup__menu__item a:hover,
+.popup__menu__item a:focus-within {
     opacity: 0.6;
     transform: translateY(-5px);
     transition: all 0.2s ease-in;
@@ -157,12 +166,14 @@ li.button {
     padding: 5px;
 }
 
-.more-button:hover {
+.more-button:hover,
+.more-button:focus-within {
     opacity: 0.8;
 }
 
 .main {
     flex: 1 1 auto;
+    overflow: scroll;
 }
 
 .footer {
@@ -180,4 +191,10 @@ li.button {
     color: #445162;
     font-size: 15px;
     cursor: pointer;
+}
+
+.header__item:focus-within,
+li.popup__menu__item a:focus-within,
+.more-button:focus-within {
+    outline: 2px solid #1d8bf5;
 }
