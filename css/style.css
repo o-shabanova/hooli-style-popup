@@ -196,9 +196,10 @@ input[class='popup__menu__more__input']:checked + label div:after{content:'Less'
     cursor: pointer;
 }
 
-.more_button_focus:focus-within,
+.more_button_focus a:focus-within,
 .header__item:focus-within,
-li.popup__menu__item a:focus-within
+li.popup__menu__item a:focus-within,
+.popup__menu__more__input:focus-within + label > div
 {
     outline: 2px solid #1d8bf5;
 }
