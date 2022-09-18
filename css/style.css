@@ -110,23 +110,21 @@ input[class='popup__menu__more__input'] + label div:after{content:'More';}
 input[class='popup__menu__more__input']:checked + label div:after{content:'Less';}
 
 .popup__menu__wrapper {
-    /*border: 1px solid #8a8989;*/
     box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
     position: absolute;
     width: 300px;
     right: 10px;
     margin-top: 20px;
-    height: fit-content;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
     flex: 1 1 auto;
+
+    overflow: scroll;
+    max-height: 490px;
 }
 
-/*li.button {*/
-/*    grid-column: 1 / -1;*/
-/*}*/
 .popup__menu, .popup__menu__more {
     padding: 15px;
     /*border: 1px solid red;*/
