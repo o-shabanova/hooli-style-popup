@@ -98,11 +98,11 @@ li {
     display: block;
 }
 
-.popup__menu__more__input + .popup__menu__more__wrapper {
+.popup__menu__more__input ~ .popup__menu__more__wrapper {
     display: none;
 }
 
-.popup__menu__more__input:checked + .popup__menu__more__wrapper {
+.popup__menu__more__input:checked ~ .popup__menu__more__wrapper {
     display: block;
 }
 
@@ -124,9 +124,9 @@ input[class='popup__menu__more__input']:checked + label div:after{content:'Less'
     flex: 1 1 auto;
 }
 
-li.button {
-    grid-column: 1 / -1;
-}
+/*li.button {*/
+/*    grid-column: 1 / -1;*/
+/*}*/
 .popup__menu, .popup__menu__more {
     padding: 15px;
     /*border: 1px solid red;*/
