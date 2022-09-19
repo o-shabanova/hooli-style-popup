@@ -204,7 +204,6 @@ input[class='popup__menu__more__input']:checked + label span:after {
 .header__item:focus-within,
 li.popup__menu__item a:focus-within,
 .popup__menu__more__input:focus-within + label > span
-    /*.more-button:focus-within*/
 {
     outline: 2px solid #1d8bf5;
 }
